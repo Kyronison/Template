@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        rawtext = findViewById(R.id.textView3);
         viewModel = new ViewModelProvider(this).get(MyViewModel.class);
         viewModel.getText().observe(this, new Observer<String>() {
             @Override
@@ -44,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         btn = findViewById(R.id.btn);
         editText1 = findViewById(R.id.editTextText);
         editText2 = findViewById(R.id.editTextText2);
-        rawtext = findViewById(R.id.textView3);
         resultTextView = findViewById(R.id.textView);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
